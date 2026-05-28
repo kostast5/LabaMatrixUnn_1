@@ -4,7 +4,7 @@
 #include <stdexcept>
 #include <locale>
 #include <algorithm>
-#include <iomanip>
+
 
 /* ----------Исключения---------- */
 class MatrixError : public std::runtime_error {
