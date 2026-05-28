@@ -3,8 +3,6 @@
 #include <cmath>
 #include <stdexcept>
 #include <locale>
-#include <algorithm>
-
 
 /* ----------Исключения---------- */
 class MatrixError : public std::runtime_error {
@@ -163,14 +161,12 @@ std::vector<T> solve_gauss(Matrix<T> A, std::vector<T> b) {
             std::vector<T> x1(n);
             for (size_t i = 0; i < n; ++i)
                 x1[i] = x_base[i] + d[i];
-            std::cout << "x" << f + 1 << " = 1\n";
             for (size_t i = 0; i < n; ++i)
                 std::cout << "x" << i + 1 << " = " << x1[i] << "\n";
 
             std::vector<T> x2(n);
             for (size_t i = 0; i < n; ++i)
                 x2[i] = x_base[i] - d[i];
-            std::cout << "x" << f + 1 << " = -1\n";
             for (size_t i = 0; i < n; ++i)
                 std::cout << "x" << i + 1 << " = " << x2[i] << "\n";
         }
